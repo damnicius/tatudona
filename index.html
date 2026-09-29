@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tatudona — Lis Mainá | Tatuadora</title>
+    <meta name="description" content="Tatudona — conheça o trabalho de Lis Mainá, tatuadora. Portfólio, estilos, flashes e informações para solicitar seu orçamento.">
+    
+    <!-- Fonts: Fira Sans (Main) & Cinzel Decorative (Legible Gothic/Editorial Display) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Fira+Sans:wght@300;400;600;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (Prototype) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        base: { 900: '#0A0A0A', 800: '#111111', 700: '#1A1A1A', 200: '#D8D8D8', 100: '#F7F7F5' },
+                        accent: '#FF3333' // Red accent based on the editorial/underground aesthetic
+                    },
+                    fontFamily: {
+                        sans: ['"Fira Sans"', 'sans-serif'],
+                        display: ['"Cinzel Decorative"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-base-900 text-base-100 font-sans antialiased selection:bg-accent selection:text-base-100 noise-bg">
+
+    <!-- HEADER -->
+    <header class="fixed top-0 w-full z-50 mix-blend-difference px-6 py-6 flex justify-between items-center">
+        <a href="#" class="font-display text-3xl md:text-4xl text-base-100 tracking-wider">TATUDONA</a>
+        
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex gap-8 items-center font-semibold tracking-wide text-sm uppercase">
+            <a href="#portfolio" class="hover:text-accent transition-colors link-underline">Portfólio</a>
+            <a href="#sobre" class="hover:text-accent transition-colors link-underline">Sobre</a>
+            <a href="#instagram" class="hover:text-accent transition-colors link-underline">Instagram</a>
+            <a href="#orcamento" class="bg-base-100 text-base-900 px-5 py-2 hover:bg-accent hover:text-base-100 transition-colors">Pedir Orçamento</a>
+        </nav>
+
+        <!-- Mobile Nav Toggle -->
+        <button id="menu-btn" class="md:hidden text-base-100 text-3xl focus:outline-none">☰</button>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-base-900 z-40 flex flex-col justify-center items-center gap-8 text-2xl uppercase font-bold">
+        <a href="#portfolio" class="mobile-link hover:text-accent">Portfólio</a>
+        <a href="#sobre" class="mobile-link hover:text-accent">Sobre</a>
+        <a href="#orcamento" class="mobile-link hover:text-accent">Orçamento</a>
+        <a href="#instagram" class="mobile-link hover:text-accent">Instagram</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="relative h-screen flex flex-col justify-end pb-24 px-6 md:px-12 pt-32 overflow-hidden">
+        <!-- Hero Background Placeholder (Replace src in production) -->
+        <img src="lis1.jpeg" 
+             alt="Lis Mainá tatuando" 
+             class="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none z-[-1]" />
+        
+        <div class="max-w-4xl relative z-10">
+            <h1 class="font-display text-6xl md:text-8xl lg:text-9xl mb-4 text-accent leading-none">TATUDONA</h1>
+            <h2 class="text-3xl md:text-5xl font-black uppercase leading-tight mb-6 max-w-2xl">
+                Tatuagem com <br>personalidade.
+            </h2>
+            <p class="text-base-200 text-lg md:text-xl mb-10 max-w-md">
+                Arte autoral, pele e muita personalidade. <br>Conheça o trabalho de Lis Mainá.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#orcamento" class="bg-accent text-base-100 font-bold uppercase tracking-wider px-8 py-4 text-center hover:bg-white hover:text-base-900 transition-transform transform hover:-translate-y-1">
+                    Pedir Orçamento →
+                </a>
+                <a href="#portfolio" class="border border-base-200 text-base-100 font-bold uppercase tracking-wider px-8 py-4 text-center hover:bg-base-800 transition-colors">
+                    Ver Portfólio
+                </a>
+            </div>
+        </div>
+        
+        <!-- Location / Info -->
+        <div class="absolute right-6 bottom-24 md:right-12 text-right hidden md:block border-l-2 border-accent pl-4">
+            <p class="font-bold uppercase tracking-widest text-sm">Lis Mainá</p>
+            <p class="text-base-200 text-sm">Tatuadora</p>
+            <p class="text-base-200 text-sm">Rio de Janeiro</p>
+        </div>
+    </section>
+
+    <!-- MANIFESTO -->
+    <section class="bg-accent text-base-900 py-32 px-6 md:px-12 flex flex-col items-center text-center">
+        <h2 class="font-black text-5xl md:text-7xl uppercase max-w-5xl leading-tight mb-8">
+            Tatuagem não é só desenho. <br>É parte da história que você decidiu carregar.
+        </h2>
+        <p class="text-xl md:text-2xl font-medium max-w-3xl">
+            [Inserir aqui texto curto explicando a proposta real da Lis. Sem clichês corporativos, com atitude e em primeira pessoa.]
+        </p>
+    </section>
+
+    <!-- PORTFÓLIO -->
+    <section id="portfolio" class="py-32 px-6 md:px-12 bg-base-900">
+        <h2 class="text-4xl md:text-6xl font-black uppercase mb-16">Algumas das minhas<br><span class="text-accent">tatuagens.</span></h2>
+        
+        <!-- Filtros Placeholder -->
+        <div class="flex flex-wrap gap-4 mb-12">
+            <button class="px-4 py-1 border border-accent text-accent uppercase text-sm font-bold">Todos</button>
+            <button class="px-4 py-1 border border-base-700 hover:border-base-200 uppercase text-sm font-bold transition-colors">[ESTILO 1]</button>
+            <button class="px-4 py-1 border border-base-700 hover:border-base-200 uppercase text-sm font-bold transition-colors">[ESTILO 2]</button>
+        </div>
+
+        <!-- Asymmetrical Grid -->
+        <div class="grid-asym mb-8">
+            <div class="item-large relative group overflow-hidden bg-base-800 aspect-[16/9] md:aspect-auto md:h-[600px]">
+                <img src="https://images.unsplash.com/photo-1590246814883-578ae11ecfa8?q=80&w=1000&auto=format&fit=crop" alt="Tattoo 1" class="w-full h-full object-cover hover-zoom" loading="lazy">
+                <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                    <p class="font-bold text-xl uppercase">[Nome da Tattoo]</p>
+                    <p class="text-accent text-sm font-bold">[Estilo]</p>
+                </div>
+            </div>
+            <div class="item-medium relative group overflow-hidden bg-base-800 aspect-square md:aspect-auto md:h-[600px]">
+                <img src="lis2.png" alt="Tattoo 2" class="w-full h-full object-cover hover-zoom" loading="lazy">
+            </div>
+        </div>
+        
+        <div class="grid-asym item-reverse">
+            <div class="item-large relative group overflow-hidden bg-base-800 aspect-[16/9] md:aspect-auto md:h-[600px]">
+                <img src="https://images.unsplash.com/photo-1562962230-16e4623d36e6?q=80&w=1000&auto=format&fit=crop" alt="Tattoo 3" class="w-full h-full object-cover hover-zoom" loading="lazy">
+            </div>
+            <div class="item-medium relative group overflow-hidden bg-base-800 aspect-square md:aspect-auto md:h-[600px]">
+                <img src="https://images.unsplash.com/photo-1578301978693-85fa9c021e09?q=80&w=800&auto=format&fit=crop" alt="Tattoo 4" class="w-full h-full object-cover hover-zoom" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- ESPECIALIDADES -->
+    <section class="py-24 px-6 md:px-12 bg-base-800 border-t border-b border-base-700">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="border-l-2 border-accent pl-6">
+                <p class="font-display text-accent text-3xl mb-2">01</p>
+                <h3 class="font-black text-2xl uppercase mb-4">[ESTILO 1]</h3>
+                <p class="text-base-200 text-sm">Descrição do estilo de trabalho real da Lis. Sem invenções.</p>
+            </div>
+            <div class="border-l-2 border-base-700 pl-6">
+                <p class="font-display text-base-700 text-3xl mb-2">02</p>
+                <h3 class="font-black text-2xl uppercase mb-4">[ESTILO 2]</h3>
+                <p class="text-base-200 text-sm">Descrição baseada no portfólio.</p>
+            </div>
+            <div class="border-l-2 border-base-700 pl-6">
+                <p class="font-display text-base-700 text-3xl mb-2">03</p>
+                <h3 class="font-black text-2xl uppercase mb-4">TATUAGENS AUTORAIS</h3>
+                <p class="text-base-200 text-sm">Projetos únicos criados a partir das suas ideias.</p>
+            </div>
+            <div class="border-l-2 border-base-700 pl-6">
+                <p class="font-display text-base-700 text-3xl mb-2">04</p>
+                <h3 class="font-black text-2xl uppercase mb-4">FLASHES</h3>
+                <p class="text-base-200 text-sm">Desenhos prontos buscando uma nova pele.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE A LIS -->
+    <section id="sobre" class="py-32 px-6 md:px-12 bg-base-900">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div class="relative bg-base-800 aspect-[3/4] overflow-hidden">
+                <img src="lis1.jpeg" alt="Foto da Lis Mainá" class="w-full h-full object-cover grayscale opacity-80" loading="lazy">
+            </div>
+            <div>
+                <h2 class="text-sm font-bold uppercase text-accent tracking-widest mb-4">Sobre mim</h2>
+                <h3 class="text-4xl md:text-5xl font-black uppercase mb-8">Eu sou <br>Lis Mainá.</h3>
+                <div class="text-base-200 text-lg space-y-6 mb-8">
+                    <p>[INSERIR TEXTO PESSOAL FORNECIDO PELA ARTISTA]</p>
+                    <p>Eu gosto de transformar ideia em desenho e desenho em coisa que acompanha você por muito tempo.</p>
+                </div>
+                <a href="#instagram" class="inline-block border-b-2 border-accent pb-1 font-bold uppercase hover:text-accent transition-colors">Acompanhe no Instagram →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="py-32 px-6 md:px-12 bg-base-100 text-base-900">
+        <h2 class="text-4xl md:text-6xl font-black uppercase mb-16 text-center">Como acontece?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto">
+            <div>
+                <p class="font-display text-5xl text-accent mb-4">01</p>
+                <h3 class="font-black text-xl uppercase mb-2">Ideia</h3>
+                <p class="text-base-700">Você conta o que está imaginando e traz suas referências.</p>
+            </div>
+            <div>
+                <p class="font-display text-5xl text-accent mb-4">02</p>
+                <h3 class="font-black text-xl uppercase mb-2">Conversa</h3>
+                <p class="text-base-700">A gente entende referência, tamanho, local e estilo.</p>
+            </div>
+            <div>
+                <p class="font-display text-5xl text-accent mb-4">03</p>
+                <h3 class="font-black text-xl uppercase mb-2">Criação</h3>
+                <p class="text-base-700">Eu desenvolvo a proposta da tatuagem para a sua pele.</p>
+            </div>
+            <div>
+                <p class="font-display text-5xl text-accent mb-4">04</p>
+                <h3 class="font-black text-xl uppercase mb-2">Tatuagem</h3>
+                <p class="text-base-700">Dia de transformar a ideia em arte na pele.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 px-6 md:px-12 bg-base-900 max-w-4xl mx-auto">
+        <h2 class="text-3xl md:text-5xl font-black uppercase mb-12 text-center">Dúvidas Frequentes</h2>
+        <div class="space-y-4">
+            <!-- Accordion Item 1 -->
+            <div class="accordion-item border-b border-base-700 pb-4">
+                <button class="w-full text-left flex justify-between items-center py-4 font-bold text-lg uppercase hover:text-accent transition-colors">
+                    Como faço um orçamento?
+                    <span class="text-accent text-2xl font-light">+</span>
+                </button>
+                <div class="accordion-content text-base-200">
+                    <p class="pb-4">Basta preencher o formulário abaixo ou me chamar no WhatsApp com a sua ideia, tamanho aproximado e local do corpo.</p>
+                </div>
+            </div>
+            <!-- Accordion Item 2 -->
+            <div class="accordion-item border-b border-base-700 pb-4">
+                <button class="w-full text-left flex justify-between items-center py-4 font-bold text-lg uppercase hover:text-accent transition-colors">
+                    Você atende onde?
+                    <span class="text-accent text-2xl font-light">+</span>
+                </button>
+                <div class="accordion-content text-base-200">
+                    <p class="pb-4">[INSERIR LOCALIZAÇÃO REAL / ESTÚDIO]</p>
+                </div>
+            </div>
+             <!-- Accordion Item 3 -->
+             <div class="accordion-item border-b border-base-700 pb-4">
+                <button class="w-full text-left flex justify-between items-center py-4 font-bold text-lg uppercase hover:text-accent transition-colors">
+                    Quanto custa uma tatuagem?
+                    <span class="text-accent text-2xl font-light">+</span>
+                </button>
+                <div class="accordion-content text-base-200">
+                    <p class="pb-4">[INSERIR POLÍTICA DE PREÇOS REAL DA LIS]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ORÇAMENTO -->
+    <section id="orcamento" class="py-32 px-6 md:px-12 bg-base-800 border-t border-base-700">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl md:text-6xl font-black uppercase mb-4 text-center">Bora Tatuar?</h2>
+            <p class="text-center text-base-200 mb-12 text-xl">Me conta sua ideia e vamos conversar.</p>
+            
+            <form class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-bold uppercase mb-2 text-base-200">Seu Nome</label>
+                        <input type="text" class="w-full bg-base-900 border border-base-700 p-4 text-base-100 focus:border-accent focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold uppercase mb-2 text-base-200">@ Seu Instagram</label>
+                        <input type="text" class="w-full bg-base-900 border border-base-700 p-4 text-base-100 focus:border-accent focus:outline-none transition-colors">
+                    </div>
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-bold uppercase mb-2 text-base-200">E-mail ou WhatsApp</label>
+                    <input type="text" class="w-full bg-base-900 border border-base-700 p-4 text-base-100 focus:border-accent focus:outline-none transition-colors">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold uppercase mb-2 text-base-200">O que você quer tatuar?</label>
+                    <textarea rows="4" class="w-full bg-base-900 border border-base-700 p-4 text-base-100 focus:border-accent focus:outline-none transition-colors"></textarea>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-bold uppercase mb-2 text-base-200">Local do Corpo</label>
+                        <input type="text" class="w-full bg-base-900 border border-base-700 p-4 text-base-100 focus:border-accent focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold uppercase mb-2 text-base-200">Tamanho Aproximado (cm)</label>
+                        <input type="text" class="w-full bg-base-900 border border-base-700 p-4 text-base-100 focus:border-accent focus:outline-none transition-colors">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold uppercase mb-2 text-base-200">Tem Referência? (Opcional)</label>
+                    <input type="file" class="w-full bg-base-900 border border-base-700 p-3 text-base-200 file:mr-4 file:py-2 file:px-4 file:border-0 file:bg-base-700 file:text-base-100 file:font-bold file:uppercase cursor-pointer hover:file:bg-accent transition-colors">
+                </div>
+
+                <button type="submit" class="w-full bg-accent text-base-100 font-bold uppercase tracking-widest py-5 mt-6 hover:bg-white hover:text-base-900 transition-colors text-lg">
+                    Enviar Ideia →
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- CTA MOBILE WHATSAPP (FIXO) -->
+    <div class="md:hidden fixed bottom-0 left-0 w-full z-50 p-4 bg-gradient-to-t from-base-900 to-transparent">
+        <a href="[LINK DO WHATSAPP]" class="block w-full bg-accent text-center text-base-100 font-bold uppercase py-4 rounded-sm shadow-xl">
+            💬 Falar com a Lis →
+        </a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-base-900 pt-24 pb-12 px-6 border-t border-base-800 text-center flex flex-col items-center">
+        <h2 class="font-display text-5xl md:text-7xl mb-6">TATUDONA</h2>
+        <p class="font-bold uppercase tracking-widest text-base-200 mb-12">Lis Mainá <br><span class="font-normal text-sm text-base-700">Tatuadora</span></p>
+        
+        <div class="flex gap-8 mb-16 uppercase font-bold text-sm">
+            <a id="instagram" href="[LINK DO INSTA]" class="hover:text-accent transition-colors">Instagram</a>
+            <a href="[LINK DO WHATSAPP]" class="hover:text-accent transition-colors">WhatsApp</a>
+            <a href="mailto:[EMAIL]" class="hover:text-accent transition-colors">E-mail</a>
+        </div>
+
+        <p class="text-base-700 font-black uppercase text-2xl md:text-4xl mb-8 opacity-20">Feito pra ficar.</p>
+        
+        <p class="text-base-700 text-xs">© 2026 Tatudona. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
